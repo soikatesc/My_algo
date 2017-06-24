@@ -84,13 +84,31 @@ BST.prototype.max = function(){
 	return runner.value
 }
 
+BST.prototype.isEmpty = function(){
+	runner = this.root
+	if(!runner){
+		return true;
+	}
+	return false;
+}
+
+
+// BST.prototype.size = function(){
+// 	runner = this.root
+	
+// }
+
+
+
 var bst = new BST()
 bst.add(5)
 bst.add(6)
 bst.add(7)
 bst.add(4)
-console.log(bst.contains(10))
-console.log(bst.min())
-console.log(bst.max())
+console.log("Contains:", bst.contains(10))
+console.log("Max:", bst.min())
+console.log("Min:", bst.max())
+console.log("Is empty: ", bst.isEmpty())
+console.log(bst)
 
 
