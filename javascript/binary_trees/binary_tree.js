@@ -60,11 +60,24 @@ BST.prototype.contains = function(value){
 	return false;
 }
 
+BST.prototype.min = function(){
+	runner = this.root
+	if(!runner){
+		return "tree is empty";
+	}
+
+	while(runner.left){
+		runner = runner.left
+	}
+	return runner.value
+}
+
 var bst = new BST()
 bst.add(5)
 bst.add(6)
 bst.add(7)
 bst.add(4)
 console.log(bst.contains(10))
+console.log(bst.min())
 
 
