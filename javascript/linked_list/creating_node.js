@@ -66,11 +66,11 @@ LinkedList.prototype.display = function(){
 	var runner = this.head;
 
 	while(runner){
-		str = str + runner.val+', ';
+		str = str + runner.val+' -> ';
 		runner = runner.next;
 	}
 
-	console.log(str);
+	console.log('Linked List: ', str)
 }
 
 LinkedList.prototype.isEmpty = function(){
@@ -175,9 +175,19 @@ LinkedList.prototype.MoveMaxBack=function(){
 		runner = runner.next;
 	}
 	this.addBack(new_node.val)
-
 }
 
+LinkedList.prototype.prependVal = function( val, before){
+	var new_node = new Node(val)
+	runner = this.head
+	prev = null
+
+	while(runner){
+		if( before == runner.next.val ){
+
+		}
+	}
+}
 
 
 // module.exports = {
