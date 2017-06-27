@@ -98,17 +98,38 @@ BST.prototype.isEmpty = function(){
 	
 // }
 
+BST.prototype.height = function(node){
+	// if(node){
+	// 	console.log(node.value)
+	// } else {
+	// 	console.log('null');
+	// }
+	if(!node){
+		// console.log('-1')
+		return -1;
+	} else if(!node.right && !node.left) {
+		console.log('1, val: ', node.value)
+		return 1;
+	}
+	var left = this.height(node.left)
+	var right = this.height(node.right)
+	console.log('left: ', left)
+	console.log('right: ', right)
+	return Math.max(left, right) + 1
+}
+
 
 
 var bst = new BST()
-bst.add(5)
-bst.add(6)
+bst.add(10)
+bst.add(8)
 bst.add(7)
-bst.add(4)
+// bst.add(3)
+// bst.add(4)
 console.log("Contains:", bst.contains(10))
 console.log("Max:", bst.min())
 console.log("Min:", bst.max())
 console.log("Is empty: ", bst.isEmpty())
-console.log(bst)
+console.log('height of node:', bst.height(bst.root))
 
 
