@@ -1,3 +1,5 @@
+var prompt = require('prompt')
+
 function Node(val){
 	this.val = val;
 	this.next = null;
@@ -182,11 +184,26 @@ LinkedList.prototype.prependVal = function( val, before){
 	runner = this.head
 	prev = null
 
-	while(runner){
-		if( before == runner.next.val ){
-
-		}
+	if(before == runner.val){
+		new_node.next = this.head
+		this.head = new_node
+		return this;
 	}
+	runner = runner.next
+	while(runner){
+		if(before == runner.val){
+			prev.next = new_node
+			console.log(prev.next)
+			prev = prev.next
+			prev.next = runner
+			return 
+		}
+		prev = runner
+		runner = runner.next
+	}
+	console.log(prev)
+	//problems
+	prev.next = new_node
 }
 
 
