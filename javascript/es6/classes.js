@@ -17,9 +17,7 @@ class Person{
 		console.log(this.weight)
 	}
 
-	// let displayWeight = () => {
-	// 	console.log(this.weight)
-	// }
+	// let displayWeight = (x) => console.log(15)
 }
 
 // Parant is the super class
