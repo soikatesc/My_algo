@@ -1,3 +1,4 @@
+var prompt = require('prompt')
 // Node = require('./creating_node')
 // console.dir(Node)
 // Node = require('./creating_node')
@@ -31,5 +32,16 @@ list.MoveMinFront()
 list.display()
 list.MoveMaxBack()
 list.display()
+list.prependVal(2, 100)
+list.display()
+// list.prependVal(3, 13)
+// list.display()
+// prompt.start();
+// prompt.get(['value'], function (err, result) {
+//     console.log('Command-line input received:');
+//     console.log('  Value: ' + result.value);
+//     list.addBack(result.value)
+//     list.display()
+// });
 
 
