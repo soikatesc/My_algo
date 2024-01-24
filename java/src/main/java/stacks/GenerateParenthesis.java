@@ -36,7 +36,6 @@ public class GenerateParenthesis {
             backtrack(result, stack, openN, closeN + 1, n);
             stack.pop();
         }
-
     }
 
     public static void main(String[] args) {
